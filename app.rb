@@ -1,9 +1,6 @@
 require 'sinatra'
 
 set :session_secret, 'super secret'
-set :haml, :index, :format => :html5
-
-@image = { title: "Kitty", url: "http://bit.ly/1eze8aE" }
 
 get '/' do
   'Hello world!'
@@ -34,5 +31,6 @@ get '/shotgun' do
 end
 
 get '/cat' do
+  @array_of_names = ["Amigo", "Oscar", "Viking"]
   erb :cat
 end
