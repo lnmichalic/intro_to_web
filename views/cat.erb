@@ -1,6 +1,10 @@
 <html>
   <head>
-    <h1>Meeoww name is <%= @array_of_names.sample %>!!!</h1>
+    <% if @name %>
+    <h1>Meeoww name is <%= @name %>!!!</h1>
+    <% else %>
+    <h1>Meeoww name is <%= @names.sample %>!!!</h1>
+    <% end %>
   </head>
   <body>
     <p>

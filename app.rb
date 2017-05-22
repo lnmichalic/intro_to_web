@@ -30,7 +30,12 @@ get '/shotgun' do
   'SHOTGUN!!!!'
 end
 
-get '/cat' do
-  @array_of_names = ["Amigo", "Oscar", "Viking"]
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"]
+  erb :cat
+end
+
+get '/named-cat' do
+  @name = params[:name]
   erb :cat
 end
